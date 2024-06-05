@@ -14,6 +14,7 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/login")
     public String createToken(@RequestBody User user) throws Exception {
         if (validateUser(user)) {
